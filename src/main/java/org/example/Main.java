@@ -16,6 +16,7 @@ public class Main {
         List<Product> productList = getProductsFromJson("src/main/resources/productsInfo.json");
         System.out.println(productList);
     }
+    //todo
 
     public static List<Product> getProductsFromJson(String filePath) {
         JSONParser jsonParser = new JSONParser();
