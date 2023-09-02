@@ -1,34 +1,29 @@
 package org.example;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.io.*;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class Main {
     public static void main(String[] args) {
-        List<Product> productList = getProductsFromJson("src/main/resources/productsInfo.json");
-        System.out.println(productList);
+        ProductFilter productFilter = new ProductFilter();
+        ProductsJsonParser productsJsonParser = new ProductsJsonParser();
+        List<Product> productList = productsJsonParser.getProductsFromJson("src/main/resources/productsInfo.json");
+        printProductsList(productList);
+//        filterByWord("Pants", productList);
+        printProductsList(productFilter.filterByWord("Pants", productList));
+        printProductsList(productFilter.filterByPriceRange(4000, 9000, productList));
     }
     //todo
 
-    public static List<Product> getProductsFromJson(String filePath) {
-        JSONParser jsonParser = new JSONParser();
 
-        try (FileReader reader = new FileReader(filePath)) {
-            Object obj = jsonParser.parse(reader);
-            JSONArray products = (JSONArray) obj;
-            Gson gson = new Gson();
-            Type listType = new TypeToken<List<Product>>() {}.getType();
-            return gson.fromJson(products.toString(), listType);
-        } catch (ParseException | IOException e) {
-            throw new RuntimeException(e);
+
+    public static void printProductsList(List<Product> list) {
+        System.out.println("List of products available");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("[" + (i+1) + "] " + list.get(i).getProductName() + " - " + list.get(i).getPrice() + " rub.");
         }
     }
+
+
 }
