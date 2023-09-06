@@ -4,6 +4,11 @@ import java.util.List;
 
 public class OnlineShop {
     private final static String shopName = "My marketplace";
+    ProductsJsonParser productsJsonParser = new ProductsJsonParser();
 
-    private List<Product> productList;
+    private final List<Product> productList = productsJsonParser.getProductsFromJson("src/main/resources/productsInfo.json");
+
+    public List<Product> getProductList() {
+        return productList;
+    }
 }
