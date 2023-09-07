@@ -15,13 +15,6 @@ public class Basket {
         productBasket.add(product);
     }
 
-    public int checkOut(List<Product> productBasket) {
-        int payment = 0;
-        for (int i = 0; i < productBasket.size(); i++) {
-            payment += productBasket.get(i).getPrice();
-        }
-        return payment;
-    }
 
 
 }

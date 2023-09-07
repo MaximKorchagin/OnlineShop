@@ -10,4 +10,12 @@ public class OnlineShop {
     public List<Product> getProductList() {
         return productList;
     }
+
+    public int checkOut(Basket basket) {
+        int payment = 0;
+        for (int i = 0; i < basket.getProductBasket().size(); i++) {
+            payment += basket.getProductBasket().get(i).getPrice();
+        }
+        return payment;
+    }
 }
