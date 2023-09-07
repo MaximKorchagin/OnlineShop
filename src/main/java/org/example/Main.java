@@ -2,18 +2,20 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Printer consolePrinter = new ConsolePrinter();
+        Printer productListConsolePrinter = new ProductListConsolePrinter();
+        Printer basketConsolePrinter = new BasketConsolePrinter();
         OnlineShop shop = new OnlineShop();
         ProductFilter productFilter = new ProductFilter();
-        consolePrinter.print(shop.getProductList());
-        consolePrinter.print(productFilter.filterByWord("Pants", shop.getProductList()));
-        consolePrinter.print(productFilter.filterByPriceRange(4000, 9000, shop.getProductList()));
+        productListConsolePrinter.print(shop.getProductList());
+        productListConsolePrinter.print(productFilter.filterByWord("Pants", shop.getProductList()));
+        productListConsolePrinter.print(productFilter.filterByPriceRange(4000, 9000, shop.getProductList()));
+
+        System.out.println("=================================");
+        Basket basket = new Basket();
+        basket.addProductToBasket(shop.getProductList().get(2));
+        basket.addProductToBasket(shop.getProductList().get(3));
+        basketConsolePrinter.print(basket.getProductBasket());
+        System.out.println(basket.checkOut(basket.getProductBasket()));
     }
-    //todo
-    //test comment
-
-
-
-
 
 }

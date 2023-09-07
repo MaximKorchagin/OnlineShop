@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.List;
 
-public class ConsolePrinter implements Printer {
+public class ProductListConsolePrinter implements Printer {
 
     @Override
     public void print(List<Product> list) {

@@ -21,40 +21,21 @@ public class Product {
         return productName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
 
     public int getPrice() {
         return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public int getVendorCode() {
         return vendorCode;
     }
 
-    public void setVendorCode(int vendorCode) {
-        this.vendorCode = vendorCode;
-    }
-
     public double getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
-    }
-
     public productType getType() {
         return type;
-    }
-
-    public void setType(productType type) {
-        this.type = type;
     }
 
     @Override
