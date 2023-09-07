@@ -11,11 +11,10 @@ public class Main {
         productListConsolePrinter.print(productFilter.filterByPriceRange(4000, 9000, shop.getProductList()));
 
         System.out.println("=================================");
-        Basket basket = new Basket();
-        basket.addProductToBasket(shop.getProductList().get(2));
-        basket.addProductToBasket(shop.getProductList().get(3));
-        basketConsolePrinter.print(basket.getProductBasket());
-        System.out.println(shop.checkOut(basket));
+        shop.getBasket().addProductToBasket(shop.getProductList().get(2));
+        shop.getBasket().addProductToBasket(shop.getProductList().get(3));
+        basketConsolePrinter.print(shop.getBasket().getProductBasket());
+        System.out.println(shop.checkOut(shop.basket));
     }
 
 }
