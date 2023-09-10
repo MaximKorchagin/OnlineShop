@@ -2,8 +2,6 @@ package org.example;
 
 
 public class Order {
-
-    private String address;
     private static final IDGenerator idGenerator = new IDGenerator();
 
 
