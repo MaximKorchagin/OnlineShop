@@ -5,4 +5,5 @@ import java.util.List;
 // O for SOLID
 public interface Printer {
     void print(List<Product> list);
+
 }

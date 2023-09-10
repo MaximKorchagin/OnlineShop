@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class Product {
     private enum productType {COMPUTER_PART, HOUSEHOLD_PRODUCT, CLOTH, SPORT_PRODUCT}
 
@@ -11,16 +13,15 @@ public class Product {
         this.type = type;
     }
 
-    private String productName;
-    private int price;
-    private int vendorCode;
-    private double rating;
+    private final String productName;
+    private final int price;
+    private final int vendorCode;
+    private final double rating;
     productType type;
 
     public String getProductName() {
         return productName;
     }
-
 
     public int getPrice() {
         return price;
@@ -47,6 +48,19 @@ public class Product {
                         ", rating=" + rating +
                         ", productType=" + type +
                         '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return vendorCode == product.vendorCode;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vendorCode);
     }
 
 }

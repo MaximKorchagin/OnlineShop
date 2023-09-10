@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72f5ec06-af87-40c1-b0d1-497bdd96465b" name="Changes" comment="basket fixed">
+    <list default="true" id="72f5ec06-af87-40c1-b0d1-497bdd96465b" name="Changes" comment="utf8!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Basket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/OnlineShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/OnlineShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/productsInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/productsInfo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -63,7 +65,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.org.example.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -76,8 +78,9 @@
       <option name="presentableId" value="Default" />
       <updated>1693478066704</updated>
       <workItem from="1693478067962" duration="820000" />
-      <workItem from="1693497840396" duration="4845000" />
-      <workItem from="1693982031382" duration="4531000" />
+      <workItem from="1693497840396" duration="5025000" />
+      <workItem from="1693577141879" duration="1221000" />
+      <workItem from="1693639289465" duration="11712000" />
     </task>
     <task id="LOCAL-00001" summary="json -&gt; products arraylist">
       <created>1693502513514</created>
@@ -100,35 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693502631912</updated>
     </task>
-    <task id="LOCAL-00004" summary="interface printer &#10;class consolePrinter">
-      <created>1693810940627</created>
+    <task id="LOCAL-00004" summary="utf8!">
+      <created>1693502771851</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1693810940627</updated>
+      <updated>1693502771851</updated>
     </task>
-    <task id="LOCAL-00005" summary="small refactoring">
-      <created>1693999377226</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1693999377226</updated>
-    </task>
-    <task id="LOCAL-00006" summary="added basket">
-      <created>1694080392994</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1694080392994</updated>
-    </task>
-    <task id="LOCAL-00007" summary="basket fixed">
-      <created>1694083937234</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1694083937234</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,10 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="json -&gt; products arraylist" />
     <MESSAGE value="utf8?" />
-    <MESSAGE value="interface printer &#10;class consolePrinter" />
-    <MESSAGE value="small refactoring" />
-    <MESSAGE value="added basket" />
-    <MESSAGE value="basket fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="basket fixed" />
+    <MESSAGE value="utf8!" />
+    <option name="LAST_COMMIT_MESSAGE" value="utf8!" />
   </component>
 </project>

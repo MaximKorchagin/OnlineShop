@@ -7,7 +7,6 @@ public class OnlineShop {
     public Basket getBasket() {
         return basket;
     }
-    //private final static String shopName = "My marketplace";
 
     ProductsJsonParser productsJsonParser = new ProductsJsonParser();
     private final List<Product> productList = productsJsonParser.getProductsFromJson("src/main/resources/productsInfo.json");
@@ -16,12 +15,12 @@ public class OnlineShop {
         return productList;
     }
 
-    public int checkOut(Basket basket) {
+    public void checkOut(Basket basket) {
         int payment = 0;
         for (int i = 0; i < basket.getProductBasket().size(); i++) {
             payment += basket.getProductBasket().get(i).getPrice();
         }
-        return payment;
+        System.out.println("Total: " + payment + " rub.");
     }
 
 
