@@ -70,7 +70,23 @@ public class DeliverToAddress implements DeliverySystem {
 
 }
 ```
+# L
+- В данном коде не реализован этот принцип, но можно было бы сделать так
+- Делаем наследников класса [Product](/src/main/java/org/example/Product.java), например SportProduct extends Product
+- Наш класс спортивных продуктов будет так же иметь поля класса [Product](/src/main/java/org/example/Product.java), будет иметь возможность заменить своего предка в местах, где это необходимо, но также иметь и свои собственные поля, например
+```
+private String sportProductType;
+private int weight;
+... etc
+```
+# I
+- Принцип также отсуствует в этом коде, но суть его ясна -
+- Например, можно было бы реализовать несколько разных интерфейсов Filter (вместо [этого класса](/src/main/java/org/example/ProductFilter.java)) и затем их использовать, но мне кажется, в этом коде будет это неуместо
 # D
+- [Link](/src/main/java/org/example/ProductListConsolePrinter.java) ProductListConsolePrinter implements Printer
+- [Link](/src/main/java/org/example/BasketConsolePrinter.java) BasketConsolePrinter implements Printer
+- [Link](/src/main/java/org/example/DeliverToAddress.java) DeliverToAddress implements DeliverySystem
+- Зависим от абстракций, а не от интерфейсов
 ```
 Printer productListConsolePrinter  = new ProductListConsolePrinter();
 Printer basketConsolePrinter = new BasketConsolePrinter();
