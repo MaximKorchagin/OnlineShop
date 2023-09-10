@@ -15,7 +15,10 @@ public class Main {
         shop.getBasket().addProductToBasket(shop.getProductList().get(3));
         shop.getBasket().addProductToBasket(shop.getProductList().get(3));
         basketConsolePrinter.print(shop.getBasket().getProductBasket());
-        shop.checkOut(shop.getBasket());
+        shop.checkOut();
+
+        System.out.println(shop.getOrder().getOrderID());
+
     }
 
 }

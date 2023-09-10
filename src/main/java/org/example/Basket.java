@@ -6,8 +6,6 @@ public class Basket {
 
     Map<Product, Integer> map = new HashMap<>();
 
-
-
     public void addProductToBasket(Product product) {
         if (map.containsKey(product)) {
             map.put(product, map.get(product) + 1);

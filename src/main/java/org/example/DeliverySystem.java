@@ -1,5 +1,6 @@
 package org.example;
 
-public class DeliverySystem {
+public interface DeliverySystem {
+    void deliver(String address, Order order); //todo
 
 }
